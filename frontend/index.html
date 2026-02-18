@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎰 FOOD SLOT MACHINE 🎰</h1>
+            <p>Match 3 Cute Foods to WIN BIG!</p>
+        </div>
+
+        <!-- Main Slot Machine -->
+        <div class="slot-wrapper">
+            <div class="slot-display">
+                <div class="reel" id="reel1">
+                    <div class="reel-content">
+                        <img src="" alt="symbol" id="img1" class="reel-image">
+                        <span id="text1" class="reel-text"></span>
+                    </div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-content">
+                        <img src="" alt="symbol" id="img2" class="reel-image">
+                        <span id="text2" class="reel-text"></span>
+                    </div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-content">
+                        <img src="" alt="symbol" id="img3" class="reel-image">
+                        <span id="text3" class="reel-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Win Message -->
+        <div class="win-message" id="winMessage"></div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="balance-info">
+                <span>Balance:</span>
+                <span id="balance" class="balance-amount">100</span>
+                <span>Credits</span>
+            </div>
+            <button id="spinBtn" class="spin-button">SPIN</button>
+            <button id="stopBtn" class="stop-button">STOP</button>
+            <div class="bet-info">Cost: 1 Credit | Win: 100 Credits</div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Spins:</span>
+                <span id="totalSpins" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Wins:</span>
+                <span id="totalWins" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Win Rate:</span>
+                <span id="winRate" class="stat-value">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="spinSound" preload="auto">
+        <source src="sounds/spin.wav" type="audio/wav">
+    </audio>
+    <audio id="winSound" preload="auto">
+        <source src="sounds/win.wav" type="audio/wav">
+    </audio>
+    <audio id="loseSound" preload="auto">
+        <source src="sounds/lose.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

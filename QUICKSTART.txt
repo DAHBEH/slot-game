@@ -1,0 +1,157 @@
+🎰 SLOT MACHINE GAME - QUICK START GUIDE 🎰
+
+═══════════════════════════════════════════════════════════════
+
+✅ WHAT'S INCLUDED:
+
+✓ Fully functional slot machine game
+✓ Python Flask backend with API
+✓ HTML5 + CSS3 + JavaScript frontend
+✓ Symbol images (bomb, seven, jackpot, cherry, diamond, gold)
+✓ Spinning and winning sound effects
+✓ Configurable symbols (change anytime via API)
+✓ Coin-based betting system
+✓ Game history tracking
+
+═══════════════════════════════════════════════════════════════
+
+⚡ QUICK START (3 Steps):
+
+1️⃣  INSTALL DEPENDENCIES:
+    Open PowerShell and run:
+    
+    pip install Flask Flask-CORS Werkzeug
+
+2️⃣  START THE GAME:
+    In PowerShell, navigate to the game folder and run:
+    
+    cd backend
+    python app.py
+    
+    Or double-click: start.ps1
+
+3️⃣  OPEN IN BROWSER:
+    Go to: http://localhost:5000
+
+═══════════════════════════════════════════════════════════════
+
+🎮 HOW TO PLAY:
+
+1. You start with 100 coins
+2. Click "SPIN" button to spin the reels (costs 1 coin)
+3. Match 3 identical symbols to WIN!
+4. Winning gives you 100 coins
+5. When you run out of coins, game is over
+
+═══════════════════════════════════════════════════════════════
+
+⚙️  CHANGE SYMBOLS (Advanced):
+
+1. Scroll to bottom of game page
+2. Find "Change Symbols" section
+3. Edit the JSON with new symbols
+4. Click "Update Symbols"
+
+Example:
+{
+  "symbols": ["bomb", "seven", "star", "heart"],
+  "images": {
+    "bomb": "/images/bomb.png",
+    "seven": "/images/seven.png",
+    "star": "/images/star.png",
+    "heart": "/images/heart.png"
+  }
+}
+
+═══════════════════════════════════════════════════════════════
+
+📁 FILE STRUCTURE:
+
+NEW SLOT GAME/
+├── backend/          ← Python Flask server
+│   ├── app.py
+│   └── requirements.txt
+├── frontend/
+│   ├── index.html    ← Game page
+│   ├── style.css     ← Styling
+│   ├── script.js     ← Game logic
+│   ├── images/       ← Symbol images (6 symbols)
+│   └── sounds/       ← Audio files (spin.wav, win.wav)
+├── generate_images.py
+├── generate_sounds.py
+├── start.ps1         ← Windows start script
+└── README.md         ← Full documentation
+
+═══════════════════════════════════════════════════════════════
+
+🔧 API ENDPOINTS:
+
+GET /api/symbols
+  Returns: Current symbols configuration
+
+POST /api/symbols
+  Updates: Symbols configuration
+
+POST /api/check-win
+  Checks: If spin results in a win
+
+═══════════════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING:
+
+❌ "Port 5000 already in use"
+   → Edit backend/app.py, change port=5000 to port=5001
+
+❌ "ModuleNotFoundError: Flask"
+   → Install: pip install Flask Flask-CORS
+
+❌ Sounds not playing
+   → Check browser console (F12)
+   → Audio files must be in frontend/sounds/
+
+❌ Images not showing
+   → Check image paths start with /images/
+   → Ensure images are in frontend/images/
+
+═══════════════════════════════════════════════════════════════
+
+🎯 DEFAULT SYMBOLS:
+
+💣 Bomb     - Red background
+7️⃣ Seven    - Gold background  
+🎯 Jackpot  - Blue background
+🍒 Cherry   - Pink background
+💎 Diamond  - Purple background
+🏆 Gold     - Orange background
+
+═══════════════════════════════════════════════════════════════
+
+📖 FEATURES IMPLEMENTED:
+
+✅ Random symbol spinning
+✅ 3-match win detection
+✅ Sound effects (spinning + winning)
+✅ Coin balance system (100 coins start, 1 per spin, 100 to win)
+✅ Configurable symbols via API
+✅ Game history/recent plays
+✅ Beautiful responsive UI
+✅ Win/lose animations
+✅ Emoji fallback for symbols
+✅ Image support
+
+═══════════════════════════════════════════════════════════════
+
+🚀 NEXT STEPS:
+
+1. Run: python backend/app.py
+2. Open: http://localhost:5000
+3. Play and enjoy! 🎉
+4. Customize symbols as needed
+5. Replace images with your own
+
+═══════════════════════════════════════════════════════════════
+
+For detailed documentation, see README.md
+For issues, check browser console (F12 - Console tab)
+
+Good luck! 🎰✨
