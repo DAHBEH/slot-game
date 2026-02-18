@@ -68,7 +68,9 @@ function updateDisplay() {
 
 // Display Symbol
 function displaySymbol(element, textElement, imageElement, symbol) {
-    textElement.textContent = SYMBOL_DISPLAY[symbol];
+    if (textElement) {
+        textElement.textContent = SYMBOL_DISPLAY[symbol];
+    }
     imageElement.src = `images/${symbol}.png`;
     imageElement.onerror = () => {
         // Fallback if image not found

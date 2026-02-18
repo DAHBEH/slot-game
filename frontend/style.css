@@ -67,7 +67,7 @@ body {
 .reel {
     width: 150px;
     height: 150px;
-    background: linear-gradient(135deg, #ffffff, #e8e8e8);
+    background: linear-gradient(135deg, #4a90d9, #1e5aa8);
     border: 4px solid #ffd700;
     border-radius: 15px;
     display: flex;
